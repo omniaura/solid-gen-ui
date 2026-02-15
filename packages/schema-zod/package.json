@@ -1,0 +1,51 @@
+{
+  "name": "@solid-gen-ui/schema-zod",
+  "version": "0.1.0",
+  "description": "Zod schema adapter for SolidGenUI",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup src/index.ts --format cjs,esm --dts",
+    "dev": "tsup src/index.ts --format cjs,esm --dts --watch",
+    "test": "vitest",
+    "typecheck": "tsc --noEmit",
+    "clean": "rm -rf dist .turbo"
+  },
+  "keywords": [
+    "generative-ui",
+    "zod",
+    "schema",
+    "validation"
+  ],
+  "author": "Peyton Spencer <peyton@omniaura.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/omniaura/solid-gen-ui.git",
+    "directory": "packages/schema-zod"
+  },
+  "dependencies": {
+    "@solid-gen-ui/core": "workspace:*",
+    "zod-to-json-schema": "^3.22.0"
+  },
+  "peerDependencies": {
+    "zod": "^3.22.0"
+  },
+  "devDependencies": {
+    "zod": "^3.22.0",
+    "tsup": "^8.0.0",
+    "typescript": "^5.3.3",
+    "vitest": "^1.2.0"
+  }
+}
