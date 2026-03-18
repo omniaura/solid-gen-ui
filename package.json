@@ -1,6 +1,6 @@
 {
   "name": "solid-gen-ui",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Generative UI framework for SolidJS - AI-powered component streaming",
   "repository": {
     "type": "git",
