@@ -19,9 +19,7 @@ jobs:
         with:
           fetch-depth: 0 # Full history for semantic-release to analyze commits
 
-      - uses: pnpm/action-setup@v3
-        with:
-          version: 8.15.0
+      - uses: pnpm/action-setup@v4
 
       - uses: actions/setup-node@v4
         with:
