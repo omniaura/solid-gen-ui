@@ -1,6 +1,8 @@
 name: CI
 
 on:
+  push:
+    branches: [main]
   pull_request:
     branches: [main]
 
@@ -23,5 +25,5 @@ jobs:
 
       - run: pnpm run build
 
-      # Tests pass when no test files found (passWithNoTests flag)
-      - run: pnpm run test -- --passWithNoTests || true
+      # Tests pass when no test files are present, but real failures still fail CI.
+      - run: pnpm run test -- --passWithNoTests
